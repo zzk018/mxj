@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>恋爱时光机 | 运行中...</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('bg2.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .container {
+            animation: slideUp 1s ease-out;
+            max-width: 800px;
+        }
+        
+        .time-display div {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            min-width: 150px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .time-display div::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #4CAF50, #2196F3);
+        }
+        
+        .time-display div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .time-display span:first-child {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 5px;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .time-display span:last-child {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <h1><i class="far fa-clock"></i> 恋爱时光机</h1>
+        <p class="subtitle">自2024年4月15日以来已经过去</p>
+        
+        <div id="timeDisplay" class="time-display">
+            <div><span id="days">0</span><span>天</span></div>
+            <div><span id="hours">0</span><span>小时</span></div>
+            <div><span id="minutes">0</span><span>分钟</span></div>
+            <div><span id="seconds">0</span><span>秒</span></div>
+        </div>
+        
+        <p class="footer">
+            <i class="fas fa-lock"></i> 很高兴能与你在一起(｡•ᴗ-)_
+        </p>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
